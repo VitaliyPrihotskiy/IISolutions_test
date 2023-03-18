@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'planets',
     pathMatch: 'full'
   },
-  { path: 'planets' },
+  { path: 'planets', },
 ];
 
 @NgModule({
