@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'planets',
     pathMatch: 'full'
   },
-  { path: 'planets', },
+  { path: 'planets', loadChildren: () => import("./modules/planets/planets.module").then(mod => mod.PlanetsModule) },
 ];
 
 @NgModule({

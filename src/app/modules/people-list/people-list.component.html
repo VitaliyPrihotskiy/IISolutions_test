@@ -1,0 +1,11 @@
+<div *ngIf="viewModel$ | async as viewModel">
+  <h1 mat-dialog-title>Inhabitants of the planet {{data.name}}</h1>
+  <mat-list>
+    <mat-list-item *ngFor="let resident of viewModel; let i = index">
+      <p matListItemLine >{{i}}. {{resident.name}}, {{resident.height}}, {{resident.birth_year}}</p>
+    </mat-list-item>
+  </mat-list>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>
